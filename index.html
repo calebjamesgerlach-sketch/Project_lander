@@ -3,21 +3,199 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
+  <title>Precision Contracting | Quality Construction</title>
   <style>
+    :root {
+      --bg-dark: #121212;
+      --card-bg: #1e1e1e;
+      --accent: #f59e0b; /* Safety amber / warm industrial gold */
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --border: #2d2d2d;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: system-ui, -apple-system, sans-serif;
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
       line-height: 1.6;
-      background-color: #121212;
-      color: #e0e0e0;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Navigation */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-main);
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: left;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin-bottom: 32px;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #121212;
+      font-weight: 700;
+      padding: 14px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .cta-btn:hover {
+      opacity: 0.9;
+    }
+
+    /* Services Grid */
+    .services {
+      padding: 60px 0;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      padding: 28px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Contact / Callout */
+    .contact-banner {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      padding: 36px;
+      margin: 40px 0 80px;
+      border-radius: 8px;
+    }
+
+    .contact-banner h2 {
+      margin-bottom: 8px;
+    }
+
+    .contact-banner p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
     }
   </style>
 </head>
 <body>
-  <h1>Site is live!</h1>
-  <p>Ready to build out the features and layout.</p>
+
+  <div class="container">
+    <nav>
+      <div class="logo">Apex <span>Contracting</span></div>
+      <a href="#contact" class="cta-btn" style="padding: 8px 18px; font-size: 0.9rem;">Call Now</a>
+    </nav>
+
+    <header class="hero">
+      <h1>Built tough.<br>Delivered with precision.</h1>
+      <p>Specializing in reliable commercial and residential building services, framing, and site development.</p>
+      <a href="#contact" class="cta-btn">Get an Estimate</a>
+    </header>
+
+    <section class="services">
+      <h2 class="section-title">Capabilities</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>General Contracting</h3>
+          <p>Full project oversight from groundwork to structural completion, keeping builds on time and within spec.</p>
+        </div>
+        <div class="card">
+          <h3>Framing & Carpentry</h3>
+          <p>Durable rough framing, additions, and heavy structural builds engineered to withstand the elements.</p>
+        </div>
+        <div class="card">
+          <h3>Remodels & Additions</h3>
+          <p>Full-scale structural expansions, interior tear-outs, and functional upgrades for existing properties.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-banner">
+      <h2>Ready to start your next build?</h2>
+      <p>Contact our crew directly for project evaluations and bid estimates.</p>
+      <p><strong>Phone:</strong> (555) 019-2834 | <strong>Email:</strong> contact@company.com</p>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Apex Contracting. Licensed, Bonded & Insured.</p>
+    </footer>
+  </div>
+
 </body>
 </html>
