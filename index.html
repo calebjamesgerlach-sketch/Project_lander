@@ -329,48 +329,90 @@
       </div>
     </header>
 
-    <section class="how-it-works">
-      <h2 class="section-title">How It Works</h2>
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-number">01</div>
-          <h3>List Your Tasks</h3>
-          <p>Put your home repair, moving need, or punch list items into our Tackle Box form.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-number">02</div>
-          <h3>Pick a Time</h3>
-          <p>Select a convenient date and arrival window directly on the calendar.</p>
-        </div>
-        <div class="step-card">
-          <div class="step-number">03</div>
-          <h3>Consider It Handled</h3>
-          <p>We arrive equipped with the right tools, knock out the list, and leave the space tidy.</p>
-        </div>
-      </div>
-    </section>
+/* 4-Stage Workflow / Service Progression */
+    .workflow {
+      padding: 60px 0;
+      border-bottom: 1px solid var(--border);
+    }
 
-    <section id="services" class="tasks">
-      <h2 class="section-title">Common Tasks We Tackle</h2>
-      <div class="task-grid">
-        <div class="task-card">
-          <h3>Painting & Touch-ups</h3>
-          <p>Full room repainting, trim touch-ups, drywall patches, and scuff repairs.</p>
-        </div>
-        <div class="task-card">
-          <h3>Heavy Lifting & Rearranging</h3>
-          <p>Moving bulky furniture, attic or garage staging, and elder assistance with cumbersome items.</p>
-        </div>
-        <div class="task-card">
-          <h3>Home Fixture Upgrades</h3>
-          <p>Swapping light fixtures, hanging mirrors/shelves, mounting TVs, or replacing cabinet pulls.</p>
-        </div>
-        <div class="task-card">
-          <h3>Carpentry & Minor Repairs</h3>
-          <p>Sticking doors, squeaky floorboards, baseboard installs, and quick deck board replacements.</p>
-        </div>
-      </div>
-    </section>
+    .workflow-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      position: relative;
+    }
+
+    .flow-box {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px 20px;
+      flex: 1;
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: relative;
+      transition: border-color 0.2s ease;
+    }
+
+    .flow-box:hover {
+      border-color: var(--accent);
+    }
+
+    .flow-step-num {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .flow-box h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+
+    .flow-box p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+
+    .flow-arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .flow-arrow svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* Stack vertically on tablets and mobile */
+    @media (max-width: 900px) {
+      .workflow-container {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .flow-box {
+        width: 100%;
+        min-height: auto;
+      }
+
+      .flow-arrow svg {
+        transform: rotate(90deg);
+      }
+    }
 
     <section id="schedule" class="booking-section">
       <h2>Drop a Task in the Tackle Box</h2>
